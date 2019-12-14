@@ -1,0 +1,149 @@
+/**
+ * Reset box-sizing
+ */
+
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * Document
+ */
+
+body {
+  font-family: $font-family;
+  line-height: 1.5;
+  color: $color-primary-dark;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Status
+ */
+
+:disabled,
+[disabled] {
+  cursor: not-allowed !important;
+}
+
+/**
+ * Link
+ */
+
+a {
+  background-color: transparent; /* Remove the gray background on active links in IE 10. */
+  -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+
+  &,
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+/**
+ * Form
+ */
+
+/*
+ * Clear `clear` button on input with 'password' type in IE
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-clear
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-reveal
+ */
+
+input {
+  font-family: $font-family;
+
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Reset button
+ */
+
+button {
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Turn off textarea resize in Chrome */
+
+textarea {
+  font-family: inherit;
+  resize: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Image
+ */
+
+/* Remove default margin */
+
+figure {
+  margin: 0;
+}
+
+/* https://css-tricks.com/almanac/properties/v/vertical-align/ */
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+/**
+ * Typography
+ */
+
+/* Remove defalut margin / padding / list-style */
+
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

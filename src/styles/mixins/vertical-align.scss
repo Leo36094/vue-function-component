@@ -1,0 +1,26 @@
+/**
+ * 1. Remove white space between inline-block
+ * See [Fighting the Space Between Inline Block Elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)
+ */
+
+@mixin vertical-align($height: 100%, $font-size: 1rem, $align: middle) {
+  height: $height;
+  font-size: 0; /* 1 */
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 100%;
+    @include vertical-align-style($align);
+  }
+
+  > * {
+    font-size: $font-size; /* 1 */
+    @include vertical-align-style($align);
+  }
+}
+
+@mixin vertical-align-style($align) {
+  display: inline-block;
+  vertical-align: $align;
+}

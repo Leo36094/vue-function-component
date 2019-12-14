@@ -1,0 +1,54 @@
+//
+// Color
+//
+
+// basic
+$color-primary-darkest                : rgb(043, 063, 087); // #2b3f57: dark-grey-blue
+$color-primary-darker                 : rgb(039, 077, 134); // #274d86: dusk-blue
+$color-primary-dark                   : rgb(028, 084, 168); // #1c54a8: sapphire
+$color-primary                        : rgb(042, 105, 199); // #2a69c7: medium-blue
+$color-primary-light                  : rgb(137, 187, 242); // #89bbf2: sky
+$color-primary-lighter                : rgb(212, 225, 244); // #d4e1f4: light-periwinkle
+$color-primary-lightest               : rgb(233, 240, 249); // #e9f0f9: ice-blue
+
+// $color-secondary-dark                 : rgb(047, 059, 082); // #2f3b52
+// $color-secondary                      : rgb(121, 128, 143); // #79808f
+// $color-secondary-light                : rgb(000, 000, 000); // #000000
+
+// $color-thirty-dark                    : rgb(000, 000, 000); // #000000
+// $color-thirty                         : rgb(000, 000, 000); // #000000
+// $color-thirty-light                   : rgb(000, 000, 000); // #000000
+
+$color-danger                         : rgb(213, 049, 049); // #d53131: reddish
+$color-warn                           : rgb(239, 132, 060); // #ef843c: dusty-orange
+
+// gray
+$gray-black                           : rgb(000, 000, 000); // #000000
+$gray-darkest                         : rgb(097, 103, 111); // #61676f: slate-grey
+$gray-darker                          : rgb(129, 136, 145); // #818891: steel
+$gray-dark                            : rgb(170, 178, 188); // #aab2bc: light-grey-blue
+$gray                                 : rgb(186, 196, 211); // #bac4d3: cloudy-blue
+$gray-light                           : rgb(223, 225, 230); // #dfe1e6: light-gray
+$gray-lighter                         : rgb(243, 245, 246); // #f3f5f6: ice-gray
+$gray-lightest                        : rgb(241, 243, 249); // #f1f3f9: light-pale-grey
+$gray-white                           : rgb(255, 255, 255); // #ffffff
+
+
+//
+// Transition
+//
+
+$transition-mode                      : cubic-bezier( .25, .8, .25, 1);
+
+
+//
+// Texting
+//
+
+$font-family                          : "system", "-apple-system", "PingFang-TC", "Segoe UI", "Microsoft JhengHei", "Roboto", "Oxygen", "Fira Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+
+$font-size-xl                         : 20px;
+$font-size-lg                         : 18px;
+$font-size-md                         : 16px;
+$font-size-sm                         : 14px;
+$font-size-xs                         : 12px;

@@ -1,0 +1,34 @@
+@mixin image-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin image-centre($height, $size: "contain", $child: "img") {
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  overflow: hidden;
+
+  > #{$child} {
+    @include image-centre-child($size);
+  }
+}
+
+@mixin image-centre-child($size: "contain") {
+  margin: -100%;
+
+  @if $size == "contain" {
+    max-height: 100%;
+    max-width: 100%;
+  } @else if $size == "cover-by-width" {
+    min-width: 100%;
+  } @else if $size == "cover-by-height" {
+    min-height: 100%;
+  }
+}
+
+@mixin full-center-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,34 @@
+/**
+ * Pure CSS text truncate
+ * See [Line Clampin' (Truncating Multiple Line Text) - Weird WebKit Flexbox Way](https://css-tricks.com/line-clampin/)
+ */
+
+@mixin text-truncate-singleline($width: 100%) {
+  // Requires inline-block or block for proper styling
+  // not work at inline-flex and flex
+
+  width: $width;
+  white-space: nowrap;
+  @include text-truncate-style;
+}
+
+@mixin text-truncate-multiline($line-to-show, $line-height: 1.5, $font-size: 1em) {
+  display: block; // fallback
+  display: -webkit-box;
+  line-height: $line-height;
+  max-height: $font-size * $line-height * $line-to-show; // fallback
+  -webkit-line-clamp: $line-to-show;
+  @include text-truncate-style;
+
+  // *** IMPORTANT SEE ***:
+  // 1. https://github.com/postcss/autoprefixer/issues/776#issuecomment-392346351
+  // 2. https://github.com/NoName4Me/yo-FE/issues/3
+  // eslint-disable-next-line
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+}
+
+@mixin text-truncate-style {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,12 @@
+@mixin italic-background {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.28) 45%,
+    #fff 0,
+    #fff 51%,
+    rgba(255, 255, 255, 0.28) 0,
+    rgba(255, 255, 255, 0.28) 95%,
+    #fff 0
+  );
+  background-size: 9px 9px;
+}

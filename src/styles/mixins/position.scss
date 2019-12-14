@@ -1,0 +1,90 @@
+@mixin position-centre($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin position-center-over-top($transform...) {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%) #{$transform};
+}
+
+@mixin position-center-over-right($transform...) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%) #{$transform};
+}
+
+@mixin position-center-over-bottom($transform...) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%) #{$transform};
+}
+
+@mixin position-center-over-left($transform...) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%) #{$transform};
+}
+
+@mixin position-top-over-left($transform...) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 0%) #{$transform};
+}
+
+@mixin position-top-over-right($transform...) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0%) #{$transform};
+}
+
+@mixin position-right-over-top($transform...) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0%, -100%) #{$transform};
+}
+
+@mixin position-right-over-bottom($transform...) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(0%, 100%) #{$transform};
+}
+
+@mixin position-left-over-top($transform...) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0%, -100%) #{$transform};
+}
+
+@mixin position-left-over-bottom($transform...) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0%, 100%) #{$transform};
+}
+
+@mixin position-bottom-over-left($transform...) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%, 0%) #{$transform};
+}
+
+@mixin position-bottom-over-right($transform...) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(100%, 0%) #{$transform};
+}

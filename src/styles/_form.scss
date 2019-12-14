@@ -1,0 +1,25 @@
+.form {
+  width: 100%;
+  &-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  &-col {
+    flex-direction: column;
+    width: calc(50% - 30px);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &--full {
+      width: calc(100% - 30px);
+    }
+    &.horizontal-end {
+      align-items: flex-end;
+    }
+  }
+}
+.error {
+  color: $color-error;
+}
