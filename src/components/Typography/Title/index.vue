@@ -29,12 +29,7 @@ export default {
   render (h, context) {
     const { level, ...restProps } = context.props
 
-    return h(TypographyText, {
-      props: {
-        level,
-        ...restProps,
-      },
-    })
+    return <TypographyText props={{ ...restProps, element: level }}/>
   }
 }
 </script>
