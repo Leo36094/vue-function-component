@@ -1,4 +1,6 @@
-# space-advisor
+# vue-functional-component Example
+
+Using Vue Functional Component to build a flexiable UI component
 
 ## Project setup
 ```
